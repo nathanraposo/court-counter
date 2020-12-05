@@ -18,6 +18,12 @@ public class MainActivity extends AppCompatActivity {
     //Varial que controla quantidade de pontos do time B
     int qtdPontostimeB = 0;
 
+    //Varial que controla quantidade de faltas do time A
+    int qtdFaltastimeA = 0;
+
+    //Varial que controla quantidade de faltas do time B
+    int qtdFaltastimeB = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,19 +46,34 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Add 1 pontos no placar e exibe.
+     * Add 1 ponto no placar e exibe.
      */
     public void addLanceLivreTimeA(View view) {
         exibirPontosTimeA(qtdPontostimeA += 1);
     }
 
     /**
-     * Exibe o placar do time A
+     * Add 1 falta no placar e exibe.
      */
-    public void exibirPontosTimeA(int score) {
-        binding.timeAPontos.setText(String.valueOf(score));
+    public void addFaltaTimeA(View view) {
+        exibirFaltasTimeA(qtdFaltastimeA += 1);
     }
-    //---------------------------------------------------//--------------------------------------
+
+    /**
+     * Exibe o placar de pontos do time A
+     */
+    public void exibirPontosTimeA(int pontos) {
+        binding.timeAPontos.setText(String.valueOf(pontos));
+    }
+
+    /**
+     * Exibe o placar de faltas do time A
+     */
+    public void exibirFaltasTimeA(int faltas) {
+        binding.timeAFaltas.setText(String.valueOf(faltas));
+    }
+
+    //----------------------------------------//----------------------------------------------------
 
     /**
      * Add 3 pontos no placar e exibe.
@@ -76,17 +97,37 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Exibe o placar do time B
+     * Add 1 falta no placar e exibe.
+     */
+    public void addFaltaTimeB(View view) {
+        exibirFaltasTimeB(qtdFaltastimeB += 1);
+    }
+
+    /**
+     * Exibe o placar de pontos do time B
      */
     public void exibirPontosTimeB(int score) {
         binding.timeBPontos.setText(String.valueOf(score));
     }
 
     /**
-     * Exibe o placar do time B
+     * Exibe o placar  de faltas do time B
+     */
+    public void exibirFaltasTimeB(int faltas) {
+        binding.timeBFaltas.setText(String.valueOf(faltas));
+    }
+
+    /**
+     * Redefine o placar de ambos os times
      */
     public void redefinirPontuacao(View view) {
-        binding.timeBPontos.setText(String.valueOf(qtdPontostimeA = 0));
-        binding.timeAPontos.setText(String.valueOf(qtdPontostimeB = 0));
+
+        //Pontos
+        binding.timeAPontos.setText(String.valueOf(qtdPontostimeA = 0));
+        binding.timeBPontos.setText(String.valueOf(qtdPontostimeB = 0));
+
+        //Faltas
+        binding.timeAFaltas.setText(String.valueOf(qtdFaltastimeA = 0));
+        binding.timeBFaltas.setText(String.valueOf(qtdFaltastimeB = 0));
     }
 }

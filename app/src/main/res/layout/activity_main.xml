@@ -10,9 +10,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Basquetebol Placar"
+            android:textColor="#616161"
+            android:textSize="20sp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,10 +56,37 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center_horizontal"
-                    android:paddingBottom="24dp"
                     android:text="0"
                     android:textColor="#000000"
                     android:textSize="56sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center_horizontal"
+                        android:text="Faltas: "
+                        android:textColor="#616161"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/timeAFaltas"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center_horizontal"
+                        android:text="0"
+                        android:textColor="#616161"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
 
                 <Button
                     android:id="@+id/btn3PontosTimeA"
@@ -77,6 +117,16 @@
                     android:layout_marginBottom="8dp"
                     android:onClick="addLanceLivreTimeA"
                     android:text="Lance Livre (+1)" />
+
+                <Button
+                    android:id="@+id/btnFaltaTimeA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:onClick="addFaltaTimeA"
+                    android:text="Falta (+1)" />
             </LinearLayout>
 
             <View
@@ -107,10 +157,37 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center_horizontal"
-                    android:paddingBottom="24dp"
                     android:text="0"
                     android:textColor="#000000"
                     android:textSize="56sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center_horizontal"
+                        android:text="Faltas: "
+                        android:textColor="#616161"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/timeBFaltas"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center_horizontal"
+                        android:text="0"
+                        android:textColor="#616161"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
 
                 <Button
                     android:id="@+id/btn3PontosTimeB"
@@ -141,6 +218,16 @@
                     android:layout_marginBottom="8dp"
                     android:onClick="addLanceLivreTimeB"
                     android:text="Lance Livre (+1)" />
+
+                <Button
+                    android:id="@+id/btnFaltaTimeB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:onClick="addFaltaTimeB"
+                    android:text="Falta (+1)" />
             </LinearLayout>
         </LinearLayout>
 
