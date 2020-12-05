@@ -1,9 +1,8 @@
 
-Projeto do Curso Android Bsics: User Input - Lab 3
+Projeto do Curso Android Basics: User Input - Lab 3
 ===================================
 
-Projeto desenvolvido seguindo aulas Instituição Udacity,
-Basicamente é um placar para controlar jogos de basquete entre duas equipes.
+Projeto desenvolvido seguindo aulas Instituição Udacity, basicamente é um placar para controlar jogos de basquete entre duas equipes.
 
 
 Court Counter Sample App
